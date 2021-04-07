@@ -4,7 +4,10 @@
 p:nth-child(odd) {
     background: #aaa;
     height: 190px;
+    padding: 8px;
 }
 p:nth-child(even) {
     background: #ccc;
+    height: 190px;
+    padding: 8px;
 }
