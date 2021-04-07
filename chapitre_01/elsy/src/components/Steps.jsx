@@ -1,12 +1,11 @@
 import React from "react";
  
 class Steps extends React.Component {
-	name = "John";
 
   render() {
     return (
 			<div className="box col-sm-3 col-6">
-                <span className="material-icons fontSize = 200 color = black">
+                <span className="material-icons" style= {{fontSize: 100}} >
                 directions_walk
 
                 </span>     

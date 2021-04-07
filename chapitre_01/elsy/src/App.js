@@ -1,6 +1,6 @@
 import React from "react";
-import './App.css';
-import Steps from "./components/Steps"
+import './styles/global.css';
+import Steps from "./components/Steps";
 
 const tempMin = -20;
 const tempMax = 40;

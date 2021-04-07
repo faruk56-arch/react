@@ -1,0 +1,10 @@
+/* .box {
+    background: #ccc;
+} */
+p:nth-child(odd) {
+    background: #aaa;
+    height: 190px;
+}
+p:nth-child(even) {
+    background: #ccc;
+}
