@@ -1,13 +1,17 @@
 /* .box {
     background: #ccc;
 } */
-p:nth-child(odd) {
+.box:nth-child(odd) {
     background: #aaa;
-    height: 190px;
-    padding: 8px;
+    
 }
-p:nth-child(even) {
+.box:nth-child(even) {
     background: #ccc;
+    
+    
+}
+
+.box {
     height: 190px;
     padding: 8px;
 }
