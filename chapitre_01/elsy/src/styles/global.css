@@ -1,14 +1,11 @@
-/* .box {
-    background: #ccc;
-} */
-.box:nth-child(odd) {
-    background: #aaa;
-    
+
+
+.box:nth-child(odd){
+    background-color: #aaa;
 }
-.box:nth-child(even) {
-    background: #ccc;
-    
-    
+
+.box:nth-child(even){
+    background-color: #ccc;
 }
 
 .box {
