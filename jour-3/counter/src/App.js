@@ -1,6 +1,7 @@
 
 import React from "react";
 import './App.css';
+import Counter from './components/Counter';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,40 +10,45 @@ class App extends React.Component {
       count: 0
 
     };
-    
+
+
   }
 
-  incrementCount =() => {
-      this.setState({
-        count: this.state.count + 1
-      });
-      console.log(this.state.count,"+");
-    };
+  incrementCount = () => {
+    this.setState({
+      count: this.state.count + 1
+    });
+  };
 
 
-    decrementCount =() => {
-      this.setState({
-        count: this.state.count - 1
-      });
-      console.log(this.state.count,"-");
+  decrementCount = () => {
+    this.setState({
+      count: this.state.count - 1
+    });
 
-    };
-
- 
+  };
   
-  render() {
-     return (
-      <div className="App">
-        <h1>Counter</h1>
-        <h2>{this.state.count}</h2>
-        <button onClick={ this.decrementCount} style={{backgroundColor: "green", margin: "10px"}}>-</button>
+  
 
-        <button onClick= { this.incrementCount} style={{backgroundColor: "red"}}>+</button>
+  render() {
+    return (
+
+      <div>
+        <h1>Counter</h1>
+        <Counter muFunc={this.state.count}
+          addFunction={this.incrementCount}
+          removeFunction={this.decrementCount}
+
+        />
+
+
+
+
       </div>
     );
   }
 
-  }
-  
+}
+
 
 export default App;
