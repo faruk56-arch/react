@@ -5,7 +5,7 @@ class Counter extends React.Component {
 
     render(props) {
         return (
-            <div>
+            <div className="container-fluid">
                 <h1>Counter</h1>
 
                 <button className="btn" onClick={this.props.addFunction} >+</button> <br />
