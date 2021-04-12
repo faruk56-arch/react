@@ -6,12 +6,40 @@ class Counter extends React.Component {
     render(props) {
         return (
             <div>
+                <h1>Counter</h1>
 
-                <button onClick={this.props.addFunction} style={{ backgroundColor: "red", borderRadius: "50%", border: "none", outline: "none", padding: "15px", margin: "10px" }}>+</button> <br />
+                <button className="btn" onClick={this.props.addFunction} >+</button> <br />
 
-                <h2 style={{ marginLeft: "20px", fontSize: "40px" }}>{this.props.muFunc}</h2>
 
-                <button onClick={this.props.removeFunction} style={{ backgroundColor: "green", margin: "10px", borderRadius: "50%", border: "none", outline: "none", padding: "15px" }}>-</button>
+                <h2 >{this.props.muFunc}</h2>
+
+                <button className="btn1" onClick={this.props.removeFunction} >-</button>
+
+
+
+
+
+
+
+
+                {/* <button className="btn" onClick={this.props.addFunction} >+</button> <br />
+
+
+                <h2>{this.props.muFunc2}</h2>
+
+                <button className="btn1" onClick={this.props.removeFunction2} >-</button>
+ */}
+
+
+
+
+
+
+
+
+
+
+
 
 
             </div>
@@ -21,6 +49,9 @@ class Counter extends React.Component {
 
 
 }
+// marginLeft: "20px", fontSize: "40px"
+// style={{ backgroundColor: "red", borderRadius: "50%", border: "none", outline: "none", padding: "15px", margin: "10px" }}
+// backgroundColor: "green", margin: "10px", borderRadius: "50%", border: "none", outline: "none", padding: "15px"
 
 
 
