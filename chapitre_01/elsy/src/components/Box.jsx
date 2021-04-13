@@ -17,8 +17,8 @@ class Box extends React.Component {
     const onOlder = () => {
       if (this.props.unit !== "L") {
         return <input type="range" min={this.props.min} max={this.props.max}
-          value={this.props.value}
-          onInput={this.props.handleInput}></input>
+          // value={this.props.value}
+          onInput={this.props.onChange}></input>
 
       }
     }
