@@ -23,7 +23,6 @@ class App extends React.Component {
     this.onHeartChange = this.onHeartChange.bind(this)
     this.onSteps = this.onSteps.bind(this)
     this.onSun = this.onSun.bind(this)
-    this.calculateWater=this.calculateWater.bind(this)
 
   }
 
@@ -45,8 +44,12 @@ class App extends React.Component {
     })
 
   }
-  calculateWater() {
-    water: e.target.value
+  calculateWater(e) {
+    if (this.onSun > 20) {
+      this.setState({
+        water: e.target.value +0.02
+      })
+    }
 
   }
 
