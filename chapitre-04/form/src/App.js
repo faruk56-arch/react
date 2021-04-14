@@ -21,15 +21,10 @@ class App extends React.Component {
     this.handleValidation = this.handleValidation.bind(this);
     this.handleEmail = this.handleEmail.bind(this);
     this.validEmail = this.validEmail.bind(this);
-    this.handleSubmit=this.handleSubmit.bind(this)
   }
 
 
-  handleSubmit(e){
-    this.setState({
-      submit:e.target.value
-    })
-  }
+
 
   handleEmail(e) {
     this.setState({
@@ -62,9 +57,11 @@ class App extends React.Component {
 
   }
 
+
   render() {
 
     return (
+
 
       <div className="container col-5">
         <h1 className="text-center mb-5 mt-5 ">Login</h1>
