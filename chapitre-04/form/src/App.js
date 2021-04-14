@@ -3,23 +3,28 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export class App extends React.Component {
+class App extends React.Component {
 
 
   constructor() {
     super()
     this.state = {
-      input: {},
-      errors: {}
+      input: "",
+      errors: ""
     }
+
   }
 
+
+
   handleValidation() {
-    let input = this.state.input;
-    let errors = {};
-    let formIsValid = true;
-
-
+    const input = {};
+    const errors = {};
+    if(input){
+      return " form-control is-valid"
+    } else {
+      return "form-control is-invalid"
+    }
 
 
   }
@@ -34,11 +39,11 @@ export class App extends React.Component {
         <form>
           <div className=" mb-3">
             <label for="exampleInputEmail1" className="form-label warning">Email address</label>
-            <input ref="email"  type="email" className="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="john@gmail.com" />
+            <input  type="email" className={this.handleValidation()}  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="john@gmail.com" />
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+            <input type="password" className={this.handleValidation()} id="exampleInputPassword1" placeholder="Password" />
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" className="form-check-input" id="exampleCheck1" />
