@@ -15,7 +15,7 @@ class App extends React.Component {
     this.state = {
       password: "",
       email: "",
-      submit: ""
+      submit: false
     }
     this.handlePassword = this.handlePassword.bind(this);
     this.handleValidation = this.handleValidation.bind(this);
@@ -57,6 +57,23 @@ class App extends React.Component {
 
   }
 
+  renderContent() {
+    if (this.state.submit) {
+      return (
+        <section>
+          <h1>Konexio</h1>
+          <h2>Learning React</h2>
+        </section>
+      );
+    } else {
+      return (
+        <section>
+          <p>Vous devez vous connecter pour voir ce contenu</p>
+        </section>
+      );
+    }
+  }
+
 
   render() {
 
@@ -64,6 +81,7 @@ class App extends React.Component {
 
 
       <div className="container col-5">
+
         <h1 className="text-center mb-5 mt-5 ">Login</h1>
         <form>
           <div className=" mb-3">
@@ -88,7 +106,8 @@ class App extends React.Component {
             <input type="checkbox" className="form-check-input" id="exampleCheck1" />
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
           </div>
-          <button type="submit" className="btn btn-primary ">Submit</button>
+          <button type="submit" className="btn btn-primary "
+          >Submit</button>
         </form>
 
       </div>
