@@ -6,7 +6,7 @@ class Add extends React.Component {
 
     render() {
         return(
-            <div>Add</div>
+            <div className="p-4">Add</div>
         )
     }
     

@@ -5,7 +5,7 @@ class Pay extends React.Component {
 
     render() {
         return (
-            <div>Pay</div>
+            <div className="p-4">Pay</div>
         )
     }
 }

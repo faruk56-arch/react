@@ -16,14 +16,11 @@ class App extends React.Component {
       items: []
 
     }
-    // this.onClickAdd = this.onClickAdd.bind(this);
-    // this.onClickList = this.onClickList.bind(this);
-    // this.onClickAdd = this.onClickAdd.bind(this);
+
   }
 
 
   onClickAdd = () => {
-    // console.log("hello","onClick");
 
     this.setState({
       activeTab: "Add"
@@ -50,8 +47,8 @@ class App extends React.Component {
   render() {
 
     return (
-      <div className="App">
-        <h1>Bakarey</h1>
+      <div className="row p-4 ">
+        <h1 className="p-4">Bakarey</h1>
         <Button
           onClickFunction={this.onClickAdd}
           isSelected={this.state.activeTab == "Add" ? "btn btn-primary" : "btn btn-light"}
@@ -69,6 +66,9 @@ class App extends React.Component {
           Pay
 
         </Button>
+        <Pay />
+        <List />
+        <Add />
 
 
 
