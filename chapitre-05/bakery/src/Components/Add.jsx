@@ -30,21 +30,24 @@ class Add extends React.Component {
     render() {
 
         return (
-            <div className="p-4  ">
-                <input className="rounded" placeholder="search" type="text"
+            <div className="  ">
+                <input className="rounded p-1 col-sm-3 " placeholder="search" type="text"
                     onChange={this.updateProductName}
 
 
                 />
-                <input type="range"
-                    min={this.state.min}
-                    max={this.state.max}
+                <button className="btn btn-success m-2 mb-3" onClick={() => this.props.addItem(this.state.productName, this.state.price)}>Add</button>
+                <div>
+                    <input className="col-md-4" type="range"
+                        min={this.state.min}
+                        max={this.state.max}
 
-                    onChange={this.updatePrice}
+                        onChange={this.updatePrice}
 
 
-                />
-                <button onClick={() => this.props.addItem(this.state.productName, this.state.price)}>ADD</button>
+                    />
+                </div>
+
             </div>
         )
     }
