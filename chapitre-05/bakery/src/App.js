@@ -6,6 +6,7 @@ import Add from './Components/Add';
 import List from './Components/List';
 import Pay from './Components/Pay';
 import Button from './Components/Button';
+import Card from './Components/Card';
 
 class App extends React.Component {
 
@@ -14,7 +15,7 @@ class App extends React.Component {
     this.state = {
       activeTab: "Add",
       items: []
-
+      
     }
 
   }
@@ -26,7 +27,6 @@ class App extends React.Component {
     })
 
   }
-
 
   onClickAdd = () => {
 
@@ -94,7 +94,7 @@ class App extends React.Component {
             Pay
 
         </Button>
-        
+
         </div>
 
         <div className="text-center ">

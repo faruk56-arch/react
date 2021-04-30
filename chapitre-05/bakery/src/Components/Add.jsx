@@ -30,7 +30,7 @@ class Add extends React.Component {
     render() {
 
         return (
-            <div className="  ">
+            <div>
                 <input className="rounded p-1 col-sm-3 " placeholder="search" type="text"
                     onChange={this.updateProductName}
 

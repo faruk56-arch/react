@@ -6,7 +6,7 @@ class Search extends React.Component {
             <div className="container col-4">
                 <p className="m-2 font-weight-bold">Country</p>
 
-                <input className="form-control mt-4 m-2 " onChange={this.props.findCountry} type="text" placeholder="Search" id="country" />
+                <input className="form-control mt-4 m-2 " onChange={this.props.findCountry} type="text" placeholder="Enter your country name" id="country" />
                 <div>
                     <button className="btn btn-primary m-2 w-25" onClick={() => this.props.oneCountry()}>Search...</button>
                 </div>

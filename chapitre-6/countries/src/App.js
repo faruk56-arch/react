@@ -106,7 +106,7 @@ class App extends React.Component {
         </div>
 
 
-        <div className="container col-3 offset-4 text-center mt-4 shadow p-4  bg-light rounded font-weight-bold text-secondary ">
+        <div className="container col-3 text-center mt-4 shadow p-4  bg-light rounded font-weight-bold text-secondary ">
           <Card
             flag={this.state.flag}
             name={this.state.name}
