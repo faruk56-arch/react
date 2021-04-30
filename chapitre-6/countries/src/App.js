@@ -12,7 +12,7 @@ class App extends React.Component {
     this.state = {
       name: " ",
       capital: "",
-      flags: "",
+      flag: "",
       population: "",
       region: "",
       search: ""
@@ -57,18 +57,20 @@ class App extends React.Component {
   // }
 
   oneCountry = () => {
-    fetch("https://restcountries.eu/rest/v2/name/" + this.state.search)
+    fetch("http://localhost:8000/countries/" + this.state.search)
       .then(response => response.json())
       .then(result => {
-        // console.log("give the france", bakarey);
+        // console.log(result.villInfo.name);
+
         this.setState({
-          name: result[0].name,
-          capital: result[0].capital,
-          flag: result[0].flag,
-          population: result[0].population,
-          region: result[0].region,
+          name: result.villInfo.name,
+          capital: result.villInfo.capital,
+          flag: result.villInfo.flag,
+          population: result.villInfo.population,
+          region: result.villInfo.region,
 
         })
+        // console.log(this.setState);
 
       })
       .catch(err => console.error("fetch error", err))
@@ -104,7 +106,7 @@ class App extends React.Component {
         </div>
 
 
-        <div className="container col-4 text-center mt-4 shadow p-4  bg-light rounded font-weight-bold text-secondary ">
+        <div className="container col-3 offset-4 text-center mt-4 shadow p-4  bg-light rounded font-weight-bold text-secondary ">
           <Card
             flag={this.state.flag}
             name={this.state.name}
