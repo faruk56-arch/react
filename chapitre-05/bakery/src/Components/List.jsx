@@ -11,9 +11,9 @@ class List extends React.Component {
             <div className="input ">
 
 
-                <ul>
+                <ul >
 
-                    {this.props.toto.map((x) => <li className="list-group-item col-6 rounded d-flex justify-content-between align-items-center">{x.name}<span class="badge badge-primary badge-pill">{x.price}</span></li>)}
+                    {this.props.toto.map((x) => <li key={x.name} className="list-group-item col-6 rounded d-flex justify-content-between align-items-center">{x.name}<span class="badge badge-primary badge-pill">{x.price}</span></li>)}
                     <button className="delete  btn-danger ">x</button>
 
                 </ul>

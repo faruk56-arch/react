@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-
 class Card extends React.Component {
     constructor() {
         super()
@@ -10,15 +9,20 @@ class Card extends React.Component {
         }
     }
     componentDidMount() {
-        fetch("https://raw.githubusercontent.com/konexio/digitous-assest/main/bakery/" + this.props.productName)
+        const Url = "https://raw.githubusercontent.com/konexio/digitous-assest/main/bakery/" + this.props.productName + ".png";
+        console.log(Url);
+        fetch(Url)
             .then(response => response.blob())
             .then(result => {
                 const transform = URL.createObjectURL(result)
                 console.log("Données", transform);
+                console.log("message", result);
+
+                this.setState({
+                    image: transform
+                })
             })
-        this.setState({
-            image: "transform"
-        })
+
     }
     render() {
         // utilisation des props
