@@ -15,7 +15,7 @@ class App extends React.Component {
     this.state = {
       activeTab: "Add",
       items: []
-      
+
     }
 
   }
@@ -60,9 +60,9 @@ class App extends React.Component {
       return <List toto={this.state.items} />
     }
     if (this.state.activeTab === "Pay") {
-      return <Pay 
-      items={this.state.items}
-      
+      return <Pay
+        items={this.state.items}
+
       />
 
     }

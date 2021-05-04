@@ -5,7 +5,7 @@ class Card extends React.Component {
     constructor() {
         super()
         this.state = {
-            image: "http://localhost:3000/images/item.png"
+            image: "images/item.png"
         }
     }
     componentDidMount() {
@@ -17,7 +17,6 @@ class Card extends React.Component {
                 const transform = URL.createObjectURL(result)
                 console.log("Données", transform);
                 console.log("message", result);
-
                 this.setState({
                     image: transform
                 })
@@ -30,9 +29,9 @@ class Card extends React.Component {
         // { this.props.price }
         // { this.props.onClick }
         return (
-            <div>
-                <button onClick={this.props.onClick(this.props.productName, this.props.price)}>
-                    <img src={this.state.image} alt="image" />
+            <div className="container col-4 p-4">
+                <button onClick={() => this.props.onClick(this.props.productName, this.props.price)}>
+                    <img className="col-8  " src={this.state.image} alt="image" />
                 </button>
             </div>
         )
