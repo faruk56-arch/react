@@ -12,7 +12,7 @@ function App() {
   return (
       <BrowserRouter>
       <div>
-        <nav className="container col-4">
+        <nav>
           <ul>
             <li><Link to='/Home'>Home</Link></li>
             <li><Link to='/Popular'>Popular</Link></li>

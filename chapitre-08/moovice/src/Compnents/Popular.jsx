@@ -28,11 +28,12 @@ class Popular extends Component {
             <div>
                 <ul >
                     {this.state.movies.map((elem) => {
-                        return <li key={elem.title}><Card
+                        return <li key={elem.title}>
+                            <Card
                             title={elem.title}
-                            date={elem.release_date}
-                            description={elem.overview}
-                            image={<img src={"https://image.tmdb.org/t/p/w300/"+elem.poster_path}/>}
+                            release_date={elem.release_date}
+                            overview={elem.overview}
+                            poster_path={"https://image.tmdb.org/t/p/w300" + elem.poster_path}
                         />
                         </li>
 
