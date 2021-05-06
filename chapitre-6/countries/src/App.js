@@ -20,47 +20,47 @@ class App extends React.Component {
     }
     this.findCountry = this.findCountry.bind(this)
   }
-  // componentDidMount = () => {
-  //   fetch("https://restcountries.eu/rest/v2/name/france")
-  //     .then(response => response.json())
-  //     .then(result => {
-  //       this.setState({
-  //         name: result[0].name,
-  //         capital: result[0].capital,
-  //         flag: result[0].flag,
-  //         population: result[0].population,
-  //         region: result[0].region
+  componentDidMount = () => {
+    fetch("https://restcountries.eu/rest/v2/name/france")
+      .then(response => response.json())
+      .then(result => {
+        this.setState({
+          name: result[0].name,
+          capital: result[0].capital,
+          flag: result[0].flag,
+          population: result[0].population,
+          region: result[0].region
 
-  //       })
+        })
 
-  //     })
-  //     .catch(err => console.error("fetch error", err))
+      })
+      .catch(err => console.error("fetch error", err))
 
-  // }
+  }
 
-  // getCountry = (country) => {
-  //   fetch("https://restcountries.eu/rest/v2/name/" + country)
-  //     .then(response => response.json())
-  //     .then(reslut => {
-  //       this.setState({
-  //         name: reslut[0].name,
-  //         capital: reslut[0].capital,
-  //         flag: reslut[0].flag,
-  //         population: reslut[0].population,
-  //         region: reslut[0].region
+  getCountry = (country) => {
+    fetch("https://restcountries.eu/rest/v2/name/" + country)
+      .then(response => response.json())
+      .then(reslut => {
+        this.setState({
+          name: reslut[0].name,
+          capital: reslut[0].capital,
+          flag: reslut[0].flag,
+          population: reslut[0].population,
+          region: reslut[0].region
 
-  //       })
+        })
 
-  //     })
-  //     .catch(err => console.error("fetch error", err))
+      })
+      .catch(err => console.error("fetch error", err))
 
-  // }
+  }
 
   oneCountry = () => {
     fetch("http://localhost:8000/countries/" + this.state.search)
       .then(response => response.json())
       .then(result => {
-        // console.log(result.villInfo.name);
+        console.log(result.villInfo.name);
 
         this.setState({
           name: result.villInfo.name,
@@ -70,7 +70,7 @@ class App extends React.Component {
           region: result.villInfo.region,
 
         })
-        // console.log(this.setState);
+        console.log(this.setState);
 
       })
       .catch(err => console.error("fetch error", err))

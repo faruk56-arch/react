@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Router, Switch, Link } from "react-router-dom"
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom"
 import Home from './Compnents/Home';
 import Popular from './Compnents/Popular';
 import Favorites from './Compnents/Favorites';
@@ -12,7 +12,7 @@ function App() {
   return (
       <BrowserRouter>
       <div>
-        <nav>
+        <nav className="container col-4">
           <ul>
             <li><Link to='/Home'>Home</Link></li>
             <li><Link to='/Popular'>Popular</Link></li>
@@ -24,7 +24,14 @@ function App() {
         </nav>
 
 
+
         <Switch>
+          <Route  exact path="/Home" component={Home}></Route>
+          <Route  exact path="/Popular" component={Popular}></Route>
+          <Route  exact path="/PopularBattle" component={PopularBattle}></Route>
+          <Route  exact path="/Favorites" component={Favorites}></Route>
+          <Route  exact path="/Weekly" component={Weekly}></Route>
+          <Route  exact path="/WeeklyBattle" component={WeeklyBattle}></Route>
 
         </Switch>
       </div>
