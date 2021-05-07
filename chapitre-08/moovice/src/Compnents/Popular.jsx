@@ -21,7 +21,7 @@ class Popular extends Component {
             })
 
     }
-
+    // poster_path={"https://image.tmdb.org/t/p/w300" + this.state.movies[0].poster_path}
 
     render() {
         return (
