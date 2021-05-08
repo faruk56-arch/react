@@ -5,7 +5,9 @@ class Favorites extends Component {
         console.log(localStorage.getItem('favorites'));
         return (
             <div>
-                Favorites
+
+            
+                
             </div>
         );
     }
