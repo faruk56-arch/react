@@ -10,7 +10,7 @@ import WeeklyBattle from './Compnents/WeeklyBattle';
 
 function App() {
   return (
-      <BrowserRouter>
+    <BrowserRouter>
       <div>
         <nav>
           <ul>
@@ -26,23 +26,15 @@ function App() {
 
 
         <Switch>
-          <Route  exact path="/Home" component={Home}></Route>
-          <Route  exact path="/Popular" component={Popular}></Route>
-          <Route  exact path="/PopularBattle" component={PopularBattle}></Route>
-          <Route  exact path="/Favorites" component={Favorites}></Route>
-          <Route  exact path="/Weekly" component={Weekly}></Route>
-          <Route  exact path="/WeeklyBattle" component={WeeklyBattle}></Route>
-
+          <Route exact path="/Home" component={Home}></Route>
+          <Route exact path="/Popular" component={Popular}></Route>
+          <Route exact path="/PopularBattle" component={PopularBattle}></Route>
+          <Route exact path="/Favorites" component={Favorites}></Route>
+          <Route exact path="/Weekly" component={Weekly}></Route>
+          <Route exact path="/WeeklyBattle" component={WeeklyBattle}></Route>
         </Switch>
       </div>
-        
-
-
-
-
-
-      </BrowserRouter>
-
+    </BrowserRouter>
   );
 }
 
