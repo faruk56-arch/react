@@ -18,7 +18,7 @@ export const getPopularMovies = () => {
 }
 
 export const getMovieAPI = (id) => {
-    const url = `http://localhost:8001/movie/euro${id}`
+    const url = `http://localhost:8001/movie/horreur${id}`
 
     return fetch(url)
         .then(response => response.json())
