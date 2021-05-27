@@ -4,6 +4,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 // recuperer la valeur de input//
+
 //creer la methode qui va envoyer la requete
 
 //Appuyer sur boutton et je declanche un avenement de
@@ -12,7 +13,25 @@ import axios from 'axios';
 function App() {
   
     const [name, setName] = useState("");
-    console.log("nom:",name);
+    
+    const addStudent = () => {
+    
+      const url = "http://localhost:8000/students"
+      axios.get(url)
+      .then(response => {
+        setName(response.data)
+      })
+
+      
+      axios.post("http://localhost:8000/students", {name: "faruk"})
+      .then(response => {
+        setName(response.data)
+      })
+
+
+
+    }
+    console.log("name:",name);
     
     
 
@@ -37,11 +56,11 @@ function App() {
             <h1>Student List</h1>
           </div>
           <div className="container col-6">
-            <h1>Added Student  </h1>
+            <h1>Add Student  </h1>
             <label className="m-3">Student Name </label>
             <input  onChange={e => setName(e.target.value)}  type="text" />
             <div>
-              <button className="btn btn-outline-primary mt-4" type="submit" for="btn-check-outlined">Send</button><br />
+              <button onClick={addStudent} className="btn btn-outline-primary mt-4" type="submit" for="btn-check-outlined">Send</button><br />
             </div>
           </div>
         </div>
